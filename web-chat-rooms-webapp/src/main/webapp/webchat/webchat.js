@@ -14,7 +14,16 @@
 			controller: 'SignInController'
 		};	
 
-		$stateProvider.state(signinState);
+		var chatState = {
+			name: 'chat',
+			url: '',
+			templateUrl: 'webchat/chat/chat.html',
+			controller: 'ChatController',
+			controllerAs: 'chatCtrl'
+		};
+
+		//$stateProvider.state(signinState);
+		$stateProvider.state(chatState);
 
 		// default routes?missing, error pages, stuff like that?
 	} ]);
