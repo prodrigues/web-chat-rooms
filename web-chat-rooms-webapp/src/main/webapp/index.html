@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Chat</title>
+    
+    <link rel="stylesheet" href="assets/thirdparty/bootstrap/dist/css/bootstrap.min.css" />
+                   
+    <script src="assets/thirdparty/jquery/dist/jquery.min.js"></script>
+    <script src="assets/thirdparty/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/thirdparty/angular/angular.min.js"></script>
+    <script src="assets/thirdparty/angular-ui-router/release/angular-ui-router.min.js"></script>
+    
+    <!-- core resources -->
+    
+    <script src="webchat/webchat.js"></script>
+    <script src="webchat/core/core.js"></script>
+    <script src="webchat/signin/signin.controller.js"></script>
+   
+    
+  </head>
+  <body ng-app="webchat">
+    <div class="content">
+      <div ui-view></div>
+    </div>
+  </body>
+</html>
