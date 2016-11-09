@@ -1,14 +1,16 @@
-<div class="row">
+<div class="row chat">
   <div class="col-xs-12">
     <div ng-repeat="message in chatCtrl.messages">
-      <div>
-        <p>{{message.text}}</p>
-        {{message.creationDate | date:'medium'}}
+      <div class="chat-message" ng-class="{me: !message.fromUser, user: message.fromUser}">
+        <p class="text">{{message.text}}</p>
+        <p class="timestamp">{{message.creationDate | date:'medium'}}</p>
       </div>
     </div>
   </div>
-  <div class="col-xs-12">
-    <input type="text" ng-model="chatCtrl.newMessage" />
-    <button ng-click="chatCtrl.sendMessage(chatCtrl.newMessage)">Send</button>
+  <div class="col-xs-12 chat-footer">
+    <form ng-submit="chatCtrl.sendMessage(chatCtrl.newMessage)">
+    <input type="text" ng-model="chatCtrl.newMessage" placeholder="Type your message..." />
+    <button type="submit">Send</button>
+    </form>
   </div>
 </div>

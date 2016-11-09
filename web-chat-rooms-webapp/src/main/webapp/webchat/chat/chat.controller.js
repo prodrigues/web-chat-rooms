@@ -8,9 +8,14 @@
   };
 
   ChatController.prototype.sendMessage = function(message) {
+    if(message.trim().length === 0) {
+      return;
+    }
+
     this.messages.push({
-      text: message,
-      creationDate: new Date()
+      creationDate: new Date(),
+      fromUser: this.messages.length % 2 === 0,
+      text: message
     });
     this.newMessage = '';
   };

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Web Chat</title>
     
+    <link rel="stylesheet" href="assets/css/webchat.css" />
     <link rel="stylesheet" href="assets/thirdparty/bootstrap/dist/css/bootstrap.min.css" />
                    
     <script src="assets/thirdparty/jquery/dist/jquery.min.js"></script>
@@ -20,9 +21,7 @@
    
     
   </head>
-  <body ng-app="webchat">
-    <div class="content">
-      <div ui-view></div>
-    </div>
+  <body class="container" ng-app="webchat">
+    <div class="col-xs-10 col-xs-offset-1" ui-view></div>
   </body>
 </html>
