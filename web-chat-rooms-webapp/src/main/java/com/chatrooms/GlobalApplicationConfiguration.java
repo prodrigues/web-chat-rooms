@@ -1,4 +1,4 @@
-package com.pr.chatrooms;
+package com.chatrooms;
 
 import org.springframework.context.annotation.Configuration;
 

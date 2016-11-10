@@ -15,7 +15,7 @@
   </context-param>
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>com.pr.chatrooms.GlobalApplicationConfiguration</param-value>
+    <param-value>com.chatrooms.GlobalApplicationConfiguration</param-value>
   </context-param>
 
   <listener>
@@ -31,7 +31,7 @@
     </init-param>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>com.pr.chatrooms.chatclient.ChatClientConfiguration</param-value>
+      <param-value>com.chatrooms.chatclient.ChatClientConfiguration</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
@@ -45,7 +45,7 @@
     </init-param>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>com.pr.chatrooms.api.ChatApiConfiguration</param-value>
+      <param-value>com.chatrooms.api.config.ChatApiConfiguration</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>

@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.pr.chatrooms</groupId>
+    <groupId>com.chatrooms</groupId>
     <artifactId>chatrooms</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
@@ -13,10 +13,14 @@
   <packaging>war</packaging>
   <name>web-chat-rooms-webapp</name>
 
+  <build>
+    <finalName>chatrooms-webapp</finalName>
+  </build>
+
   <dependencies>
     <dependency>
-      <groupId>com.pr.chatrooms</groupId>
-      <artifactId>webapp-api</artifactId>
+      <groupId>com.chatrooms</groupId>
+      <artifactId>api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
