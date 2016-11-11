@@ -22,6 +22,7 @@
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
+  <!--
   <servlet>
     <servlet-name>chatClientSevlet</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -35,6 +36,7 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  -->
 
   <servlet>
     <servlet-name>chatApiSevlet</servlet-name>
@@ -45,18 +47,20 @@
     </init-param>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>com.chatrooms.api.config.ChatApiConfiguration</param-value>
+      <param-value>com.chatrooms.api.config.ApiConfig</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
 
+  <!-- 
   <servlet-mapping>
     <servlet-name>chatClientServlet</servlet-name>
     <url-pattern>/chat-client/*</url-pattern>
   </servlet-mapping>
-
+  -->
+ 
   <servlet-mapping>
-    <servlet-name>chatClientServlet</servlet-name>
+    <servlet-name>chatApiSevlet</servlet-name>
     <url-pattern>/api/*</url-pattern>
   </servlet-mapping>
 </web-app>
