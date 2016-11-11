@@ -15,6 +15,26 @@
 
   <build>
     <finalName>chatrooms-webapp</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>${basedir}</directory>
+              <includes>
+                <include>target/**</include>
+              </includes>
+              <excludes>
+                <exclude>target</exclude>
+              </excludes>
+            </fileset>
+          </filesets>
+          <excludeDefaultDirectories>true</excludeDefaultDirectories>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 
   <dependencies>
