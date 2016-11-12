@@ -57,6 +57,8 @@
 
     "globals": {
         "angular": false,
-        "$": false
+        "$": false,
+        "SockJS": false,
+        "Stomp": false
     }
 }

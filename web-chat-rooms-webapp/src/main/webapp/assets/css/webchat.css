@@ -1,0 +1,167 @@
+
+.container {
+  background-color: #314C74;
+}
+
+.chat {
+  background-color: #EBEFF4;
+  overflow: hidden;
+}
+
+.chat > div {
+  padding: 14px 26px;
+}
+
+.chat-footer {
+  background-color: #FFFFFF;
+  border-top: 1px solid #CCCCCC;
+}
+
+.chat-footer input[type="text"] {
+  border: none;
+  padding: 6px;
+}
+
+.chat-footer input[type="text"]:focus {
+  border-bottom: 1px solid #0F89FF;
+  outline: none;
+}
+
+.chat-message {
+  clear: both;
+  display: block;
+  position: relative;
+}
+
+.chat-message.me {
+  float: right;
+  text-align: right;
+}
+
+.chat-message .text {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 8px;
+  padding: 13px 14px;
+  vertical-align: top;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+}
+
+.chat-message .text:before {
+  content: '\00a0';
+  display: block;
+  height: 6px;
+  position: absolute;
+  top: 19px;
+  width: 8px;
+  -webkit-transform: rotate(29deg) skew(-35deg);
+  -moz-transform: rotate(29deg) skew(-35deg);
+  -ms-transform: rotate(29deg) skew(-35deg);
+  -o-transform: rotate(29deg) skew(-35deg);
+  transform: rotate(29deg) skew(-35deg); 
+}
+
+.chat-message.user .text {
+  background-color: #FFFFFF;
+  color: #000000;
+  -webkit-animation-name: slideFromLeft;
+  -moz-animation-name: slideFromLeft;
+  animation-name: slideFromLeft;
+}
+
+.chat-message.user .text:before {
+  background-color: #FFFFFF;
+  left: -3px;
+}
+
+.chat-message.me .text {
+  background-color: #0F89FF;
+  color: #FFFFFF;
+  text-align: left;
+  -webkit-animation-name: slideFromRight;
+  -moz-animation-name: slideFromRight;
+  animation-name: slideFromRight;
+}
+
+.chat-message.me .text:before {
+  background-color: #0F89FF;
+  right: -3px;
+}
+
+.chat-message .timestamp {
+  color: #AAAAAA;
+  font-size: 10px;
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay:0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    margin-left: -200px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideFromLeft {
+  0% {
+    margin-left: -200px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    margin-right: -200px;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideFromRight {
+  0% {
+    margin-right: -200px;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
