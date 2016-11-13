@@ -17,11 +17,12 @@
     if(message.trim().length === 0) {
       return;
     }
-    
+
     this.ChatService.sendMessage({
       creationDate: new Date(),
       fromUser: this.messages.length % 2 === 0,
-      text: message
+      text: message,
+      author: 'The one and only'
     });
     this.newMessage = '';
   };

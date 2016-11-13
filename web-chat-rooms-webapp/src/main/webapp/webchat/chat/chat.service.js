@@ -38,9 +38,17 @@
   };
 
   ChatService.prototype.sendMessage = function(message) {
+    var creationDate = message.creationDate;
+    if(typeof creationDate === 'undefined') {
+      creationDate = new Date().toISOString();
+    } else if(Object.prototype.toString.call(creationDate) === '[object Date]') {
+      creationDate = creationDate.toISOString();
+    }
+
     var data = {
+      creationDate: creationDate,
       text: message.text,
-      author: ''
+      author: message.author
     };
 
     var stompOpts = {
@@ -58,11 +66,7 @@
   };
 
   var _getMessage = function(data) {
-    var receivedMessage = JSON.parse(data);
-    return {
-      text: receivedMessage.text,
-      creationDate: new Date() //receivedMessage.creationDate
-    };
+    return JSON.parse(data);
   };
 
   ChatService.$inject = ['$q', '$timeout'];
